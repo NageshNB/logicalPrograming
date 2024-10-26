@@ -1,1 +1,1 @@
-# logicalPrograming
+# Logical Programing
