@@ -36,4 +36,26 @@ public class TrappingRainWater {
         
     }
 
+
+    // solving trapping rain water in single loop
+    // static int trappedWater(int arr[]){
+    //     int arrLen = arr.length-1, l = 0, r = 0;
+    //     int lMax = arr[l], rMax = arr[r];
+    //     int res = 0;
+    //     while(l<r){
+    //         if(lMax < rMax){
+    //             l++;
+    //             lMax = Math.max(lMax, arr[l]);
+    //             res += lMax - arr[l];
+    //         }
+    //         else{
+    //             r++;
+    //             rMax = Math.max(rMax, arr[r]);
+    //             res += rMax - arr[r];
+    //         }
+    //     }
+    //     return res;
+    // }
+    
+
 }
