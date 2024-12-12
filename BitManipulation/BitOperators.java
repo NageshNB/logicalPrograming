@@ -31,6 +31,26 @@ public class BitOperators {
 
         // update i th bit
         System.out.println(updateBit(5, 2, 0));
+
+        //clear I bits
+        System.out.println(clearIBits(15,3));
+
+        //clear bits from I to J
+        System.out.println(clearBitsFromIToJ(15,2,4)); // that is in range
+    }
+
+    static int clearBitsFromIToJ(int num, int ith, int jth){
+        int a = (~0) << jth+1;
+        int b = (1 << ith) - 1;
+        int bitMask = a | b;
+
+        return num & bitMask;
+    }
+
+    static int clearIBits(int num, int ith){
+        int bitMask = (~0) << ith;
+
+        return num & bitMask;
     }
 
     static int updateBit(int num, int ith, int newBit){
