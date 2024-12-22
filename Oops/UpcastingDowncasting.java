@@ -1,3 +1,4 @@
+package Oops;
 
 
 import java.util.Scanner;
@@ -5,21 +6,29 @@ import java.util.Scanner;
 class Father {
     int fatherAge = 45;
     String fatherName = "Tom";
+    void start(){
+        System.out.println("father start");
+    }
 }
 
 class Son extends Father { // Son is now a subclass of Father
     int sonAge = 15;
     String sonName = "Jerry";
+    @Override
+    void start(){
+        System.out.println("Son start");
+        super.start();
+    }
 }
 
 public class UpcastingDowncasting {
     public static void main(String args[]) {
         Scanner scan = new Scanner(System.in);
-        Father father = new Son(); // Upcasting: Son to Father
+        Father father = new Father(); // Upcasting: Son to Father
         // System.out.println(father.fatherAge); // Accessing Father class property
         // System.out.println(father.fatherName); // Accessing Father class property
-
-        Son son = (Son)father;
+father.start();
+        // Son son = (Son)father;
         // System.out.println("Downcasting");
         // System.out.println(son.fatherAge);
         // System.out.println(son.fatherName);
