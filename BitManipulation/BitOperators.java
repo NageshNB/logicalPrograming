@@ -40,7 +40,7 @@ public class BitOperators {
     }
 
     static int clearBitsFromIToJ(int num, int ith, int jth){
-        int a = (~0) << jth+1;
+        int a = (~0) << (jth+1);
         int b = (1 << ith) - 1;
         int bitMask = a | b;
 

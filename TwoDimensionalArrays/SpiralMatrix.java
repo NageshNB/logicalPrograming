@@ -32,18 +32,14 @@ public class SpiralMatrix {
             }
 
             //bottom
-            for(int i = endCol-1; i >= startCol; i--){
-                if(startRow == endRow){//for 4*3 matrix it prints duplicate row values
-                    break;
-                }
+            for(int i = endCol-1; i > startCol; i--){
+                
                 System.out.print(arr[endRow][i] + " ");
             }
 
             //left
-            for(int i = endRow-1; i >= startRow+1; i--){
-                if(startCol == endCol){//for 3*4 matrix it prints duplicate col values
-                    break;
-                }
+            for(int i = endRow-1; i > startRow; i--){
+                
                 System.out.print(arr[i][startCol] + " ");
             }
             startCol++;
